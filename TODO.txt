@@ -1,2 +1,4 @@
+
+Developer, which worked on Jetty integration:
 - test
 - probably some more dead code reduction
