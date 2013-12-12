@@ -1,6 +1,6 @@
 "Co v diplomové práci dělám?"
-Snažím se vylepšit Jenkins tím, že vyměním starý servlet kontejner a jeho wrapper za nový servlet kontejner Undertow. 
-Zvolený nový kontejner by měl dosahovat většího výkonu a jeho vývoj bude nadále pokračovat, zatímco starý kontejner
+Snažím se vylepšit Jenkins tím, že vyměním starý vestavěný webserver Winstone a jeho wrapper Jetty za nový webserver Undertow. 
+Zvolený nový webserver by měl dosahovat většího výkonu a jeho vývoj bude nadále pokračovat, zatímco starý server
 je už neudržovaný. Následně se budu snažit potvrdit zlepšení výkonu pomocí "performace" testů.
 
 
