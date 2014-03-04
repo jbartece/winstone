@@ -69,6 +69,8 @@ public class Launcher implements Runnable {
      * available protocol listeners.
      */
     public Launcher(Map args) throws IOException {
+        System.out.println("\nWINSTONE: constructor\n");
+        
         boolean success=false;
         try {
             Logger.log(Logger.MAX, RESOURCES, "Launcher.StartupArgs", args + "");
@@ -214,6 +216,8 @@ public class Launcher implements Runnable {
      * The main run method. This handles the normal thread processing.
      */
     public void run() {
+        System.out.println("\nWINSTONE: run\n");
+        
         boolean interrupted = false;
         try {
             ServerSocket controlSocket = null;
@@ -329,6 +333,7 @@ public class Launcher implements Runnable {
      * listener thread. For now, just shut it down with a control-C.
      */
     public static void main(String argv[]) throws IOException {
+        System.out.println("\nWINSTONE: main\n");
         Log.setLog(new JavaUtilLog());  // force java.util.logging for consistency & backward compatibility
 
         Map args = getArgsFromCommandLine(argv);
@@ -358,6 +363,7 @@ public class Launcher implements Runnable {
     }
     
     public static Map getArgsFromCommandLine(String argv[]) throws IOException {
+        System.out.println("\nWINSTONE: getArgsFromCommandLine\n");
         Map args = new CmdLineParser(Option.all(Option.class)).parse(argv,"nonSwitch");
         
         // Small hack to allow re-use of the command line parsing inside the control tool
